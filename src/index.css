@@ -19,3 +19,27 @@ form {
 .btn-round {
   margin: 20px;
 }
+
+
+section {
+  margin-bottom: 20px;
+}
+
+section img {
+  width: 100%;
+  height: auto;
+}
+
+section h2 {
+  margin: 10px 0;
+}
+
+section p {
+  margin: 10px 0 20px;
+}
+
+section a {
+  text-decoration: none;
+  color: #007bff; 
+  font-weight: bold;
+}
