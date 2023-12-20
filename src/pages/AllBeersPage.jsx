@@ -79,7 +79,11 @@ return (
         <h3>{beer.name}</h3>
         <p>{beer.tagline}</p>
         <p><small>Contributed by: {beer.contributed_by}</small></p>
+        <br />
+        <button>
         <Link to={`/beers/${beer._id}`}>Beer details</Link>
+        </button>
+        
         <hr />
 
     </div>

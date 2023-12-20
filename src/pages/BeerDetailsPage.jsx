@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import axios from 'axios';
@@ -29,7 +30,15 @@ function BeerDetailsPage() {
     if(error) return <div>Error!{error.message}</div>;
 
     return (
-        <div>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            maxWidth: '600px',
+            margin: 'auto',
+            padding: '20px',
+        }}>
             {beer && (
                 <>
                 <img src={beer.image_url} alt={beer.name} style={{height: '200px'}}/>
@@ -38,6 +47,11 @@ function BeerDetailsPage() {
                 <p>{beer.description}</p>
                 <p>First Brewed: {beer.first_brewed}</p>
                 <p><small>Contributed by: {beer.contributed_by}</small></p>
+                
+                <br />
+                <button>
+                <Link to={`/beers`}>Back to List</Link>
+                </button>
                 </>
             )}
         </div>

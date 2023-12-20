@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -27,7 +28,15 @@ function RandomBeersPage() {
         if(error) return <div>Error loading beer details{error.message}</div>;
 
         return (
-            <div>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                maxWidth: '600px',
+                margin: 'auto',
+                padding: '20px',
+            }}>
                 {beer && (
                     <>
                     <img src={beer.image_url} alt={beer.name} style={{height: '200px'}}/>
@@ -37,6 +46,10 @@ function RandomBeersPage() {
                     <p>First Brewed: {beer.first_brewed}</p>
                     <p>Attentuation Level: {beer.attenuation_level}</p>
                     <p><small>Contributed by: {beer.contributed_by}</small></p>
+                    <br />
+                    <button>
+                    <Link to={`/beers`}>Check All Beers</Link>
+                    </button>
                     </>
                 )}
             </div>
