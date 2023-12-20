@@ -6,7 +6,16 @@ import newBeer from '../assets/new-beer.png';
 
 function HomePage() {
     return (
-        <div>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            maxWidth: '600px',
+            margin: 'auto',
+            padding: '20px',
+        }}>
+        
         <section>
             <img src={allBeers} alt="all beers" />
             <h2>All Beers</h2>
